@@ -9,6 +9,7 @@ let myPlayer;
 let cursors;
 let stars
 var score;
+let scoreBoard
 
 export function getScore(){
   return score
@@ -59,6 +60,7 @@ export default new Phaser.Class({
     
     this.add.image(650, 300, "background");
     this.addStars()
+    
 
     cursors = this.input.keyboard.createCursorKeys();
 
@@ -87,6 +89,7 @@ export default new Phaser.Class({
       null,
       this
     );
+    scoreBoard = this.add.text(440, 40, "SCORE: 0", {fontSize: '32px', fill: '#fff'});
       
 
     //myPlayer.setBounce(1, 1);
@@ -127,6 +130,10 @@ export default new Phaser.Class({
         child.y = height
       }
     }); 
+    if (score == 500){
+      this.addStars()
+    }
+    scoreBoard.setText('Score: ' + score)
     
 
 /*
