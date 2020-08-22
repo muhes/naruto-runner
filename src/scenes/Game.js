@@ -44,13 +44,7 @@ export default new Phaser.Class({
     this.load.spritesheet('player', player, {
       frameWidth: 266,
       frameHeight: 280,
-      //gravity: playerGravity
     });
-    
-
-    //this.player = this.physics.add.sprite(gameOptions.playerStartPosition, 0, "player");
-    //this.player.setGravityY(gameOptions.playerGravity);
-
 
     this.load.image("star", star);
   },
@@ -68,17 +62,7 @@ export default new Phaser.Class({
     myPlayer.setGravityY(400)
     myPlayer.setGravityX(0)
     myPlayer.x = 200
-    //myPlayer.y = -50
-    //myPlayer.playerStartPosition(200)
-
     const processCollision = (myPlayer , star) => {
-      //tiles.destroy(); 
-      /*
-      const starsLeft = stars.countActive();
-      if (starsLeft === 0) {
-        this.scene.start('winscreen');
-      }
-      */
      this.scene.start('winscreen');
     }
     
@@ -104,11 +88,8 @@ export default new Phaser.Class({
     });
 
     stars.children.iterate(function (child) {
-      //child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
       child.setVelocityX(150 - Math.random() * 300);
       child.setGravityX(-10)
-      //child.setVelocityY(150 - Math.random() * 300);
-      //child.setBounce(1, 1);
       child.setCollideWorldBounds(true);
     }); 
   },
