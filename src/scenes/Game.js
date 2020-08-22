@@ -100,7 +100,7 @@ export default new Phaser.Class({
       key: 'star',
       repeat: 3,
       setScale: {x: 0.2, y: 0.2 },
-      setXY: { x:800, y: 800 }
+      setXY: { x:800, y: 400 }
     });
 
     stars.children.iterate(function (child) {
@@ -130,9 +130,11 @@ export default new Phaser.Class({
         child.y = height
       }
     }); 
-    if (score == 500){
+    /*
+    if (score == 500){  
       this.addStars()
     }
+    */
     scoreBoard.setText('Score: ' + score)
     
 
