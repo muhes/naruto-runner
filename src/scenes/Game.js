@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 import mp3 from "../assets/Orbital\ Colossus.mp3";
 import background from "../assets/konoha.png";
-import player from "../assets/naruto-body-resize.png";
+import player from "../assets/small-naruto-clear.png";
 import star from "../assets/ninjastar.png"
 import { accelerate, decelerate } from "../utils";
 
@@ -42,8 +42,8 @@ export default new Phaser.Class({
     this.load.image("background", background);
 
     this.load.spritesheet('player', player, {
-      frameWidth: 266,
-      frameHeight: 280,
+      frameWidth: 256,
+      frameHeight: 256  ,
     });
 
     this.load.image("star", star);
@@ -73,7 +73,7 @@ export default new Phaser.Class({
       null,
       this
     );
-    scoreBoard = this.add.text(440, 40, "SCORE: 0", {fontSize: '32px', fill: '#fff'});
+    scoreBoard = this.add.text(100, 40, "SCORE: 0", {fontSize: '32px', fill: '#fff'});
       
 
     //myPlayer.setBounce(1, 1);
