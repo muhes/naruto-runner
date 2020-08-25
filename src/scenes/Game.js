@@ -118,15 +118,6 @@ export default new Phaser.Class({
     */
     scoreBoard.setText('Score: ' + score)
     
-
-/*
-    if (cursors.space.isDown) {
-      const x = decelerate(velocity.x);
-      const y = decelerate(velocity.y);
-      myPlayer.setVelocity(x, y)
-    }
-*/
-    //if (cursors.soace.)
     if (cursors.space.isDown) myPlayer.setVelocityY(accelerate(velocity.y, -2)); 
     if (cursors.right.isDown) myPlayer.setVelocityX(accelerate(velocity.x, 1));
     if (cursors.down.isDown) myPlayer.setVelocityY(accelerate(velocity.y, 1));
