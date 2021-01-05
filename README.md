@@ -1,5 +1,5 @@
 # Mintbean's PhaserJS Template
-
+This is a flappy bird clone created using phaserJS
 ## Getting Started
 
 1. Download or clone this project
